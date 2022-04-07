@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="bmi.css">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            margin: 0px;
+            font-family: 'Baloo Bhaina 2', cursive;
+            padding: 0px;
+            background: url("https://images.pexels.com/photos/50597/man-male-boy-a-person-50597.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            background-size:  100%
+        }
+        .left{
+            display: inline-block;
+            color: white;
+
+            position: absolute;
+            left: 34px;
+            top: 20px;
+
+
+        }
+        .mid{
+            display: block;
+            width: 55%;
+            margin: 20px auto;
+            color: white;
+
+
+        }
+        .right{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: inline-flex;
+            color: white;
+
+            width: 13%;
+        }
+        .navbar1{
+            display: inline-block;
+        }
+        .navbar1 li{
+            display: inline-block;
+            font-size: 15px;
+        }
+        .navbar1 li a{
+            color: azure;
+            text-decoration: none;
+            padding: 34px;
+        }
+        .navbar1 li a:hover,.navbar1 li a.active{
+            text-decoration: underline;
+            color: gray;
+        }
+        .navbar2{
+            display: inline-block;
+        }
+
+        .left img{
+            width: 130px;
+            height: 120px;
+        }
+        .left div{
+            text-align: center;
+        }
+        .container{
+            color: azure;
+            font-size: 20px;
+            margin: 40px 180px;
+            padding: 1px;
+            width: 20%;
+            border-radius: 15px;
+            border-color: black;
+            background-color : black;
+            opacity: 0.5;
+
+
+        }
+        .container h1{
+            text-align: center;
+            border: 1px solid azure;
+            border-radius: 15px;
+            width: 60%;
+            margin: 10px 10px;
+            padding: 5px 5px;
+    
+        }
+        .container button{
+            display: block;
+            width: 60%;
+            margin: 10px 10px;
+            padding: 5px 5px;
+        
+            border-radius: 15px;
+            color: azure;
+            margin: 3px 2px;
+
+        }
+        .container button:hover{
+            background-color: gray;
+        }
+        #height, #weight {
+            width: 150px;
+            height: 25px;
+            margin-top: 30px;
+        }
+
+        #weight-guide{
+            margin-left: 75px;
+            margin-top: 25px;
+        }
+
+        #results{
+            font-size: 35px;
+            margin-left: 90px;
+            margin-top: 20px;
+            color: blue;
+        }
+
+        button{
+            width: 150px;
+            height: 35px;
+            margin-left: 90px;
+            margin-top: 25px;
+            border-radius: 5px;
+            border-style: none;
+            background-color: blue;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        h1{
+            padding-left: 15px;
+            padding-top: 25px;
+        }
+        .container.input{
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+		<img src="logo.jpeg" alt="club logo">
+
+
+	</div>
+	<div class="mid">
+		<ul class="navbar1">
+			<li><a href="index.php" class="active">HOME</a></li>
+			
+            <li><a href='logout.php'>LOGOUT</a></li>
+		</ul>
+
+	</div>
+    <div class="container">
+    <h1>BMI Calculator</h1>
+        <form>
+        <p><label>Height in CM: </label><input type="text" id="height"></p>
+        <p><label>Weight in KG: </label><input type="text" id="weight"></p>
+        <button>Calculate</button>
+        <div id="results"></div>
+        
+        <div class="weight-guide">
+            <h3>BMI Weight Guide</h3>
+            <div>
+                <p>Under Weight = Less than 18.6</p>
+                <p>Normal Range = 18.6 and 24.9</p>
+                <p>Overweight = Greater than 24.9</p>
+            </div>
+        </div>
+        </form>
+    </div>
+
+</body>
+<script src="bmi.js"></script>
+</html>
